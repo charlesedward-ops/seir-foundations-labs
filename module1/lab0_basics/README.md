@@ -54,7 +54,7 @@ Connection Method: SSH Client — VS Code/Git Bash with .pem key
 
 Instance Terminated: Yes
 
-I launched an Amazon EC2 t3.micro instance using my saved SEIR Foundations launch template in the us-east-1 Region. AWS assigned the public IPv4 address 100.54.131.209. I connected to the instance using SSH from the Git Bash terminal in Visual Studio Code, authenticating with my .pem private key as ec2-user. After connecting, the SEIR Foundations Chewbacca Operations Center dashboard displayed automatically. I also executed seir-dashboard manually to verify that the installation worked. The dashboard showed 2 vCPUs, approximately 913 MiB of memory, an 8 GiB root disk, and system uptime. I used whoami and pwd to verify my Linux username and working directory. During troubleshooting, I verified the SSH host-key fingerprint using the EC2 system log and used verbose SSH diagnostics to confirm successful public-key authentication.
+I launched an Amazon EC2 t3.micro instance using my saved SEIR Foundations launch template in the us-east-1 Region. AWS assigned the public IPv4 address 100.54.131.209. I connected to the instance using SSH from the Git Bash terminal in Visual Studio Code, authenticating as ec2-user with my .pem private key. During the connection process, I verified the SSH server's identity by comparing its host-key fingerprint against the EC2 system log. I also used verbose SSH diagnostics to inspect the connection process and confirm successful public-key authentication. These troubleshooting steps helped me understand the distinction between verifying a remote server's identity and authenticating my access to that server. After successfully connecting, the SEIR Foundations Chewbacca Operations Center dashboard displayed automatically. I also executed seir-dashboard manually to verify that the installation worked correctly. The dashboard displayed 2 virtual CPUs (vCPUs), approximately 913 MiB of memory, an 8 GiB root disk, and system uptime. I used whoami and pwd to verify my Linux username and current working directory. This deployment strengthened my understanding of EC2 provisioning, SSH security, Linux system verification, and systematic troubleshooting.
 
 ### Deployment 2 — EC2 Instance Connect
 
@@ -88,7 +88,7 @@ I completed an additional fourth deployment to reinforce my ability to connect t
 
 ## Reflection and Lessons Learned
 
-1. What CPU, memory, disk, and uptime tell me about the instance?
+### 1. What CPU, memory, disk, and uptime tell me about the instance?
 
 During my first deployment, the SEIR Foundations Chewbacca Operations Center dashboard displayed 2 virtual CPUs (vCPUs), approximately 913 MiB of memory, an 8 GiB root disk, and system uptime.
 
@@ -104,7 +104,7 @@ These metrics helped me understand the instance's available computing resources 
 
 Reviewing these metrics reinforced the importance of monitoring system resources when managing cloud infrastructure.
 
-2. What became easier after repeating the process?
+### 2. What became easier after repeating the process?
 
 After completing four EC2 deployments, I became more comfortable with the overall instance launch, connection, verification, and termination process.
 
@@ -114,7 +114,7 @@ I also gained experience using two connection methods: SSH through Git Bash and 
 
 By the fourth deployment, I had a clearer understanding of the sequence of steps required to launch an instance, establish remote access, verify the environment, document the results, and clean up AWS resources.
 
-3. What errors did I encounter, and how did you resolve them?
+### 3. What errors did I encounter, and how did I resolve them?
 
 During the first deployment, I encountered challenges establishing and verifying my SSH connection.
 
@@ -126,7 +126,7 @@ After successfully connecting, I verified the Linux environment using whoami and
 
 This experience reinforced the importance of reading terminal output, using diagnostic commands, and systematically verifying each stage of a connection rather than relying on trial and error.
 
-4. Did I retain the launch template and clean up your practice instances?
+### 4. Did I retain the launch template and clean up my practice instances?
 
 Yes. I retained my saved SEIR Foundations EC2 launch template so it can be reused for future labs and deployments.
 
@@ -144,8 +144,9 @@ This reinforced an important cloud operations principle: infrastructure manageme
 
 - [Deployment tracking report](documentation/lab0_deployment_tracking.pdf) — public IPv4 addresses, connection methods, screenshot references, short narratives, and termination status.
 - [Screenshots folder](screenshots/) — saved console and terminal evidence from the four deployments.
+- [EC2 user-data startup script](scripts/seir_ec2_userdata.sh) — configures the SEIR Foundations Chewbacca Operations Center dashboard during instance initialization.
 
-> **Note:** Screenshot filenames in the workbook should match the files committed in `screenshots/`. Do not commit `.pem` private keys, AWS credentials, or other secrets.
+> **Note:** Screenshot filenames referenced in the deployment tracking report should match the files committed in `screenshots/`. Do not commit `.pem` private keys, AWS credentials, or other secrets.
 
 ## Resource cleanup and cost awareness
 
@@ -169,8 +170,10 @@ lab0_basics/
 ├── README.md
 ├── documentation/
 │   └── lab0_deployment_tracking.pdf
-└── screenshots/
-    └── [deployment screenshots]
+├── screenshots/
+│   └── [deployment screenshots]
+└── scripts/
+    └── seir_ec2_userdata.sh
 ```
 
 ---
