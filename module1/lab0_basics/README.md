@@ -42,7 +42,7 @@ This lab introduced Amazon Elastic Compute Cloud (Amazon EC2) instance provision
 
 The addresses above are historical deployment records; the instances have been terminated.
 
-For the full deployment notes and screenshot references, see the [deployment tracking workbook](documentation/lab0_deployment_tracking.xlsx).
+For the full deployment notes and screenshot references, see the [deployment tracking report](documentation/lab0_deployment_tracking.pdf).
 
 ## Implementation and verification
 
@@ -142,7 +142,7 @@ This reinforced an important cloud operations principle: infrastructure manageme
 
 ## Evidence
 
-- [Deployment tracking workbook](documentation/lab0_deployment_tracking.xlsx) — public IPv4 addresses, connection methods, screenshot references, short narratives, and termination status.
+- [Deployment tracking report](documentation/lab0_deployment_tracking.pdf) — public IPv4 addresses, connection methods, screenshot references, short narratives, and termination status.
 - [Screenshots folder](screenshots/) — saved console and terminal evidence from the four deployments.
 
 > **Note:** Screenshot filenames in the workbook should match the files committed in `screenshots/`. Do not commit `.pem` private keys, AWS credentials, or other secrets.
@@ -168,7 +168,7 @@ The AWS billing review showed usage for EC2 instance runtime and public IPv4 add
 lab0_basics/
 ├── README.md
 ├── documentation/
-│   └── lab0_deployment_tracking.xlsx
+│   └── lab0_deployment_tracking.pdf
 └── screenshots/
     └── [deployment screenshots]
 ```
