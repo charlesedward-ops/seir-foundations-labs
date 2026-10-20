@@ -46,23 +46,45 @@ For the full deployment notes and screenshot references, see the [deployment tra
 
 ## Implementation and verification
 
-### Deployment 1 — Launch and SSH validation
+### Deployment 1 — SSH Client (VS Code / Git Bash)
 
-I launched an Amazon EC2 `t3.micro` instance from the saved SEIR Foundations launch template. I connected as `ec2-user` using SSH from Git Bash in Visual Studio Code, authenticating with my private `.pem` key. The Chewbacca Operations Center dashboard appeared automatically after login. I also ran `seir-dashboard` manually to confirm the command was installed and operational.
+Public IPv4 Address: 100.54.131.209
+Connection Method: SSH Client — VS Code/Git Bash with .pem key
+Instance Terminated: Yes
 
-The dashboard displayed system information, including two vCPUs, approximately 913 MiB of memory, an 8 GiB root disk, and system uptime. I used `whoami` and `pwd` to verify my Linux user and working directory. During troubleshooting, I checked the SSH host-key fingerprint using the EC2 system log and used verbose SSH diagnostics to confirm public-key authentication.
+I launched an Amazon EC2 t3.micro instance using my saved SEIR Foundations launch template in the us-east-1 Region. AWS assigned the public IPv4 address 100.54.131.209.
 
-### Deployment 2 — Browser-based access
+I connected to the instance using SSH from the Git Bash terminal in Visual Studio Code, authenticating with my .pem private key as ec2-user.
 
-I launched another EC2 instance and connected using **EC2 Instance Connect** in the AWS Management Console. The Chewbacca Operations Center dashboard appeared successfully. I recorded the deployment information and terminated the instance afterward.
+After connecting, the SEIR Foundations Chewbacca Operations Center dashboard displayed automatically. I also executed seir-dashboard manually to verify that the installation worked.
 
-### Deployment 3 — Repeatable deployment
+The dashboard showed 2 vCPUs, approximately 913 MiB of memory, an 8 GiB root disk, and system uptime. I used whoami and pwd to verify my Linux username and working directory.
 
-I launched a third EC2 instance and connected through the AWS Management Console using EC2 Instance Connect. This deployment provided additional practice with provisioning and remote access. I captured the required evidence and terminated the instance.
+During troubleshooting, I verified the SSH host-key fingerprint using the EC2 system log and used verbose SSH diagnostics to confirm successful public-key authentication.
 
-### Deployment 4 — Repeat SSH authentication
+### Deployment 2 — EC2 Instance Connect
 
-I completed a fourth deployment to reinforce SSH access using Git Bash and my existing `.pem` private key. After connecting, I documented the deployment and terminated the instance.
+Public IPv4 Address: 50.16.43.120
+Connection Method: EC2 Instance Connect — AWS Console (browser-based SSH)
+Instance Terminated: Yes
+
+I deployed a second Amazon EC2 instance and connected using EC2 Instance Connect through the AWS Management Console. The instance was assigned public IPv4 address 50.16.43.120. After connecting, I confirmed that the SEIR Foundations Chewbacca Operations Center dashboard appeared successfully. I recorded the connection information and terminated the instance after completing the deployment.
+
+### Deployment 3 — EC2 Instance Connect
+
+Public IPv4 Address: 100.63.174.255
+Connection Method: EC2 Instance Connect — AWS Console (browser-based SSH)
+Instance Terminated: Yes
+
+For my third deployment, I launched another Amazon EC2 instance and used the EC2 Instance Connect through the AWS Management Console. The instance received public IPv4 address 100.63.174.255. This deployment provided additional practice with the EC2 launch and connection process. I documented the connection method, recorded the required screenshot reference, and terminated the instance after completing the exercise.
+
+### Deployment 4 — SSH Client (Git Bash)
+
+Public IPv4 Address: 3.93.193.104
+Connection Method: SSH Client — Git Bash with .pem key
+Instance Terminated: Yes
+
+I completed an additional fourth deployment to reinforce my ability to connect to Amazon EC2 instances using SSH. The instance was assigned public IPv4 address 3.93.193.104. I used Git Bash and my existing .pem private key to establish the SSH connection. This deployment reinforced my understanding of key-based authentication and remote Linux access. After documenting the deployment, I terminated the instance. 
 
 ## Evidence
 

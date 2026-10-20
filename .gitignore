@@ -1,0 +1,29 @@
+
+# SEIR Foundations Labs - Git Ignore Rules
+
+# AWS private SSH keys and credentials
+*.pem
+*.key
+.aws/
+credentials
+
+# Environment files containing secrets
+.env
+.env.*
+!.env.example
+
+# Microsoft Office temporary files
+~$*
+*.tmp
+*.temp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Local editor settings
+.vscode/
