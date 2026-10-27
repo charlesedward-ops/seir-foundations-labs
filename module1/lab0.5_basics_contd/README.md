@@ -108,18 +108,18 @@ sudo cat /var/lib/cloud/instance/user-data.txt
 ## 5. Folder Structure
 
 ```
-seir-foundations-homework/
+seir-foundations-labs/
 └── module1/
     ├── lab0_basics/
     └── lab0.5_basics_contd/
         ├── README.md
         ├── group_CarlosEduardo.txt
         └── screenshots/
-            ├── Maarek_Section5_quiz.jpg
-            ├── Maarek_Section6_quiz.jpg
             ├── BAM_1.1.jpg      (extra credit)
             ├── BAM_1.2.jpg      (extra credit)
-            └── BAM_1.3.jpg      (extra credit)
+            ├── BAM_1.3.jpg      (extra credit)
+            ├── Maarek_Section5_quiz.jpg
+            └── Maarek_Section6_quiz.jpg
 ```
 
 ---
