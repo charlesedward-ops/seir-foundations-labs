@@ -12,9 +12,9 @@
    - [Maarek_Section5_quiz.jpg](./screenshots/Maarek_Section5_quiz.jpg)
    - [Maarek_Section6_quiz.jpg](./screenshots/Maarek_Section6_quiz.jpg)
 3. ["Be A Man" Extra Credit](#3-be-a-man-extra-credit)
-   - [BAM_1.1 – SSH Connection to EC2](#bam_11--ssh-connection-to-ec2)
-   - [BAM_1.2 – Customized EC2 Webpage](#bam_12--customized-ec2-webpage)
-   - [BAM_1.3 – Display the user_data Script via SSH](#bam_13--display-the-user_data-script-via-ssh)
+   - [BAM_1.1.jpg](./screenshots/BAM_1.1.jpg)
+   - [BAM_1.2.jpg](./screenshots/BAM_1.2.jpg)
+   - [BAM_1.3.jpg](./screenshots/BAM_1.3.jpg)
 4. [Submission Checklist](#4-submission-checklist)
 5. [Folder Structure](#5-folder-structure)
 
@@ -43,7 +43,7 @@ Group membership and assignments verified per the
 
 ## 3. "Be A Man" Extra Credit
 
-### BAM_1.1 – SSH Connection to EC2
+### BAM_1.1 – SSH Connection to EC2 – [`BAM_1.1.jpg`](./screenshots/BAM_1.1.jpg)
 
 Connected to the EC2 instance with a **local SSH client** (Git Bash on Windows), **not** EC2 Instance Connect, and ran `whoami` and `date`.
 
@@ -58,7 +58,7 @@ date
 
 ---
 
-### BAM_1.2 – Customized EC2 Webpage
+### BAM_1.2 – Customized EC2 Webpage – [`BAM_1.2.jpg`](./screenshots/BAM_1.2.jpg)
 
 Apache (`httpd`) web server deployed on Amazon Linux 2023 through an EC2 **User Data** script. The page shows:
 
@@ -70,7 +70,7 @@ Apache (`httpd`) web server deployed on Amazon Linux 2023 through an EC2 **User 
 
 ---
 
-### BAM_1.3 – Display the user_data Script via SSH
+### BAM_1.3 – Display the user_data Script via SSH – [`BAM_1.3.jpg`](./screenshots/BAM_1.3.jpg)
 
 From a local SSH session at home, I found the `user_data` script on the running EC2 instance and printed it with `cat`.
 
