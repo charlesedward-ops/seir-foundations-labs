@@ -9,12 +9,12 @@
 ## Table of Contents
 1. [General – Group Verification](#1-general--group-verification)
 2. [Udemy (Stéphane Maarek) Quiz](#2-udemy-stéphane-maarek-quiz)
-   - [Maarek_Section5_quiz.jpg](./screenshots/Maarek_Section5_quiz.jpg)
-   - [Maarek_Section6_quiz.jpg](./screenshots/Maarek_Section6_quiz.jpg)
+   - [Maarek_Section5_quiz.jpg](#maarek-section5-quiz)
+   - [Maarek_Section6_quiz.jpg](#maarek-section6-quiz)
 3. ["Be A Man" Extra Credit](#3-be-a-man-extra-credit)
-   - [BAM_1.1.jpg](./screenshots/BAM_1.1.jpg)
-   - [BAM_1.2.jpg](./screenshots/BAM_1.2.jpg)
-   - [BAM_1.3.jpg](./screenshots/BAM_1.3.jpg)
+   - [BAM_1.1.jpg](#bam-1-1)
+   - [BAM_1.2.jpg](#bam-1-2)
+   - [BAM_1.3.jpg](#bam-1-3)
 4. [Submission Checklist](#4-submission-checklist)
 5. [Folder Structure](#5-folder-structure)
 
@@ -33,9 +33,11 @@ Group membership and assignments verified per the
 
 ## 2. Udemy (Stéphane Maarek) Quiz
 
+<a id="maarek-section5-quiz"></a>
 ### Section 5 Quiz – [`Maarek_Section5_quiz.jpg`](./screenshots/Maarek_Section5_quiz.jpg)
 ![Maarek_Section5_quiz.jpg](./screenshots/Maarek_Section5_quiz.jpg)
 
+<a id="maarek-section6-quiz"></a>
 ### Section 6 Quiz – [`Maarek_Section6_quiz.jpg`](./screenshots/Maarek_Section6_quiz.jpg)
 ![Maarek_Section6_quiz.jpg](./screenshots/Maarek_Section6_quiz.jpg)
 
@@ -43,6 +45,7 @@ Group membership and assignments verified per the
 
 ## 3. "Be A Man" Extra Credit
 
+<a id="bam-1-1"></a>
 ### BAM_1.1 – SSH Connection to EC2 – [`BAM_1.1.jpg`](./screenshots/BAM_1.1.jpg)
 
 Connected to the EC2 instance with a **local SSH client** (Git Bash on Windows), **not** EC2 Instance Connect, and ran `whoami` and `date`.
@@ -58,6 +61,7 @@ date
 
 ---
 
+<a id="bam-1-2"></a>
 ### BAM_1.2 – Customized EC2 Webpage – [`BAM_1.2.jpg`](./screenshots/BAM_1.2.jpg)
 
 Apache (`httpd`) web server deployed on Amazon Linux 2023 through an EC2 **User Data** script. The page shows:
@@ -70,6 +74,7 @@ Apache (`httpd`) web server deployed on Amazon Linux 2023 through an EC2 **User 
 
 ---
 
+<a id="bam-1-3"></a>
 ### BAM_1.3 – Display the user_data Script via SSH – [`BAM_1.3.jpg`](./screenshots/BAM_1.3.jpg)
 
 From a local SSH session at home, I found the `user_data` script on the running EC2 instance and printed it with `cat`.
