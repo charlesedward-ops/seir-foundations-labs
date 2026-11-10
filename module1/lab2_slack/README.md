@@ -96,7 +96,6 @@ The Critical incident would.
 - **What happened:** The script printed `Skipped.` and nothing was sent to Slack.
 - **Why a kill switch is useful during maintenance:** The alert is skipped and not sent to Slack. SLACK_ALERTS_ENABLED must be true and SLACK_ALERT_SEVERITY=INFO for it to send. This is useful for testing alerts and to ensure false alerts are not sent out in error.
 
-![Experiment 2](screenshots/exp2_kill_switch.png)
 
 ### Experiment 3 — Lower hw4's WARNING threshold below current disk usage
 
